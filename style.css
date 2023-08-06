@@ -1,0 +1,340 @@
+/* default styles */
+* {
+    font-family: 'Roboto', sans-serif;
+    --primary-black: black;
+    --primary-white: white;
+    --accent-gray: #cfcfcf;
+    --secondary-gray: #929292;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+body {
+    margin: 0px;
+    position: relative;
+    top: 0;
+}
+/* styling the button and the stroke button */
+a.button, button.button {
+    padding-inline: 20px !important;
+    padding-block: 10px !important;
+    color: var(--primary-white) !important;
+    background-color: var(--primary-black) !important;
+    border-radius: 30px !important;
+    display: inline-block;
+    outline: none;
+    border: none;
+}
+a.button-stroke, button.button-stroke {
+    outline: none;
+    padding-inline: 15px !important;
+    padding-block: 10px !important;
+    color: var(--primary-black) !important;
+    background-color: var(--primary-white) !important;
+    border-radius: 30px !important;
+    border: 1px solid var(--accent-gray) !important;
+    display: inline-block;
+}
+
+
+
+/* stylign the company logo both in the nav and in the footer */
+a#logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+}
+
+
+
+/* styling the nav bar */
+nav {
+    margin-inline: auto;
+    inline-size: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-block: 10px;
+}
+nav > span#menu {
+    display: none;
+}
+nav > div#menu-ctn {
+    inline-size: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav > div#menu-ctn > div#simple-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+}
+div#simple-links > * {
+    color: var(--primary-black);
+    font-size: 14px;
+    text-transform: capitalize;
+}
+div#simple-links > div.top-nav-dropdown {
+    position: relative;
+    top: 0;
+}
+div#simple-links > div.top-nav-dropdown:hover > div,
+div#simple-links > div.top-nav-dropdown.show > div {
+    display: flex;
+}
+div#simple-links > div.top-nav-dropdown > div {
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    inline-size: max-content;
+    border-radius: 10px;
+    padding-block: 20px;
+    padding-inline: 20px;
+    background-color: var(--primary-white);
+    box-shadow: 0px -1px 10px var(--accent-gray),
+                0px 1px 10px var(--accent-gray),
+                -1px 0px 10px var(--accent-gray),
+                1px 0px 10px var(--accent-gray);
+}
+div#simple-links > div.top-nav-dropdown > div > * {
+    color: black;
+}
+div#action-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+}
+div#action-links > * {
+    text-transform: capitalize;
+    color: var(--primary-black);
+    font-size: 14px;
+}
+
+
+
+
+/* styling the main */
+main {
+    padding-block: 40px;
+}
+main > img {
+    display: block;
+    inline-size: 100px;
+    block-size: 100px;
+    margin-inline: auto;
+}
+main > h1, main > p {
+    text-align: center;
+}
+main > h1 {
+    font-size: 40px;
+    margin-block-end: 0px;
+}
+main > div {
+    width: 80%;
+    margin-block-start: 200px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+main > div > * {
+    width: 23%;
+    border: 1px solid var(--accent-gray);
+    border-radius: 20px;
+    padding: 25px;
+}
+div.quick-tip > span {
+    display: inline-block;
+    padding: 10px;
+    margin-block-end: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--accent-gray);
+    font-size: 20px;
+}
+div.quick-tip > div > h2 {
+    margin-block-end: 0px;
+}
+div.quick-tip > div > p {
+    margin-block-start: 10px;
+    margin-block-end: 20px;
+}
+div.quick-tip > div > a {
+    color: black;
+    text-decoration: 2px underline;
+    font-weight: 700;
+}
+
+
+/* styling all the section heading */
+section > h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+
+/* styling the FAQs */
+section#faq {
+    margin-block-start: 100px;
+}
+section#faq > div#faq-accordion {
+    max-width: 500px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-block-start: 60px;
+    margin-block-end: 60px;
+}
+div.accordion-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+div.accordion-item > div > span {
+    border: 1px solid var(--primary-black);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+div.accordion-item > div > span.accordion-question {
+    border: none;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+div.accordion-item > div.accordion-answer {
+    width: 100%;
+    line-height: 1.4;
+    padding-inline-start: 50px;
+    font-size: 14px;
+    display: none;
+}
+div.accordion-item > div.accordion-answer > a {
+    text-decoration: 1px underline currentColor;
+    color: var(--primary-black);
+}
+div.accordion-item.show > div.accordion-answer {
+    display: block;
+}
+div.accordion-item > span:nth-of-type(1) {
+    display: none;
+}
+div.accordion-item > span:nth-of-type(2) {
+    display: inline;
+}
+div.accordion-item.show > span:nth-of-type(1) {
+    display: inline;
+}
+div.accordion-item.show > span:nth-of-type(2) {
+    display: none;
+}
+section#faq > button {
+    margin-inline: auto;
+    display: block;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+
+/* styling the admonition section */
+section#admonition {
+    margin-block-start: 150px;
+}
+section#admonition > h1 {
+    margin-block-end: 0px;
+}
+section#admonition > p {
+    text-align: center;
+    text-transform: capitalize;
+}
+section#admonition > div {
+    width: max-content;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-block-start: 30px;
+}
+section#admonition > div > * {
+    text-transform: capitalize;
+}
+
+
+
+/* styling the footer */
+footer {
+    margin-block-start: 150px;
+    padding-inline: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+footer > div#company-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+footer > div#company-info > * {
+    margin: 0px;
+}
+footer > div#company-info > p {
+    color: var(--secondary-gray);
+}
+footer > div#company-info > div#company-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+footer > div#download-btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+footer > div#company-info > div#company-links > * {
+    text-transform: capitalize;
+    color: var(--primary-black);
+    font-size: 14px;
+    font-weight: 600;
+}
+footer > div#copyright-social-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 50px;
+}
+footer > div#copyright-social-info > span {
+    font-size: 14px;
+    color: var(--secondary-gray);
+}
+footer > div#copyright-social-info > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+footer > div#copyright-social-info > div > * {
+    font-size: 20px;
+    color: var(--secondary-gray);
+}
