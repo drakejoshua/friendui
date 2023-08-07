@@ -14,26 +14,27 @@ body {
     margin: 0px;
     position: relative;
     top: 0;
+    background-color: var(--primary-white);
 }
 
 /* styling the button and the stroke button */
 a.button, button.button {
-    padding-inline: 20px !important;
-    padding-block: 10px !important;
+    padding-inline: 1.25rem !important;
+    padding-block: 0.625rem !important;
     color: var(--primary-white) !important;
     background-color: var(--primary-black) !important;
-    border-radius: 30px !important;
+    border-radius: 1.875rem !important;
     display: inline-block;
     outline: none;
     border: none;
 }
 a.button-stroke, button.button-stroke {
     outline: none;
-    padding-inline: 15px !important;
-    padding-block: 10px !important;
+    padding-inline: 0.9375rem !important;
+    padding-block: 0.625rem !important;
     color: var(--primary-black) !important;
     background-color: var(--primary-white) !important;
-    border-radius: 30px !important;
+    border-radius: 1.875rem !important;
     border: 1px solid var(--accent-gray) !important;
     display: inline-block;
 }
@@ -59,7 +60,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-block: 10px;
+    padding-block: 0.625rem;
 }
 nav > span#menu {
     display: none;
@@ -79,7 +80,7 @@ nav > div#menu-ctn > div#simple-links {
 }
 div#simple-links > * {
     color: var(--primary-black);
-    font-size: 14px;
+    font-size: 0.875rem;
     text-transform: capitalize;
 }
 div#simple-links > div.top-nav-dropdown {
@@ -106,16 +107,16 @@ div#simple-links > div.top-nav-dropdown.show > div {
 
 div#simple-links > div.top-nav-dropdown > div {
     position: absolute;
-    top: 30px;
-    left: -15px;
+    top: 1.875rem;
+    left: -1.875rem;
     z-index: -1;
     display: flex;
     flex-direction: column;
     gap: 20px;
     inline-size: max-content;
     border-radius: 10px;
-    padding-block: 20px;
-    padding-inline: 20px;
+    padding-block: 1.25rem;
+    padding-inline: 1.25rem;
     opacity: 0;
     transition: 1s;
     background-color: var(--primary-white);
@@ -137,7 +138,7 @@ div#action-links {
 div#action-links > * {
     text-transform: capitalize;
     color: var(--primary-black);
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 
@@ -145,24 +146,26 @@ div#action-links > * {
 
 /* styling the main */
 main {
-    padding-block: 40px;
+    padding-block: 2.5rem;
+    background-image: url(./dots-6488171__340.webp), linear-gradient( to bottom, transparent, var(--primary-white) );
+    background-blend-mode: overlay;
 }
 main > img {
     display: block;
-    inline-size: 100px;
-    block-size: 100px;
+    inline-size: 6.25rem;
+    block-size: 6.25rem;
     margin-inline: auto;
 }
 main > h1, main > p {
     text-align: center;
 }
 main > h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
     margin-block-end: 0px;
 }
 main > div {
-    width: 80%;
-    margin-block-start: 200px;
+    inline-size: 80%;
+    margin-block-start: 12.5rem;
     margin-inline: auto;
     display: flex;
     flex-direction: row;
@@ -170,25 +173,26 @@ main > div {
     justify-content: space-between;
 }
 main > div > * {
-    width: 23%;
+    inline-size: 23%;
     border: 1px solid var(--accent-gray);
     border-radius: 20px;
-    padding: 25px;
+    padding: 1.563rem;
+    background-color: var(--primary-white);
 }
 div.quick-tip > span {
     display: inline-block;
-    padding: 10px;
-    margin-block-end: 40px;
+    padding: 0.625rem;
+    margin-block-end: 2.5rem;
     border-radius: 10px;
     border: 1px solid var(--accent-gray);
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 div.quick-tip > div > h2 {
     margin-block-end: 0px;
 }
 div.quick-tip > div > p {
-    margin-block-start: 10px;
-    margin-block-end: 20px;
+    margin-block-start: 0.625rem;
+    margin-block-end: 1.25rem;
 }
 div.quick-tip > div > a {
     color: black;
@@ -200,22 +204,21 @@ div.quick-tip > div > a {
 /* styling all the section heading */
 section > h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 1.875rem;
 }
 
 
 /* styling the FAQs */
 section#faq {
-    margin-block-start: 100px;
+    margin-block-start: 6.25rem;
 }
 section#faq > div#faq-accordion {
-    max-width: 500px;
+    max-inline-size: 31.25rem;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-block-start: 60px;
-    margin-block-end: 60px;
+    margin-block: 3.75rem;
 }
 div.accordion-item {
     display: flex;
@@ -225,25 +228,31 @@ div.accordion-item {
     align-items: center;
     gap: 10px;
 }
+div.accordion-item > div:nth-of-type(1) {
+    max-inline-size: 70%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
 div.accordion-item > div > span {
     border: 1px solid var(--primary-black);
-    padding: 10px;
+    padding: 0.625rem;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 1.25rem;
     display: inline-block;
 }
 div.accordion-item > div > span.accordion-question {
     border: none;
-    font-size: 15px;
+    font-size: 0.9375rem;
     text-transform: capitalize;
     font-weight: 700;
 }
 div.accordion-item > div.accordion-answer {
-    width: 100%;
+    inline-size: 100%;
     line-height: 1.4;
-    padding-inline-start: 50px;
-    font-size: 14px;
-    height: 0px;
+    padding-inline-start: 3.125rem;
+    font-size: 0.875rem;
+    block-size: 0px;
     overflow: hidden;
     transition: 0.5s;
 }
@@ -253,7 +262,7 @@ div.accordion-item > div.accordion-answer > a {
 }
 div.accordion-item.show > div.accordion-answer {
     display: block;
-    height: 70px;
+    block-size: 4.375rem;
 }
 div.accordion-item > span:nth-of-type(1) {
     display: none;
@@ -270,14 +279,14 @@ div.accordion-item.show > span:nth-of-type(2) {
 section#faq > button {
     margin-inline: auto;
     display: block;
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: capitalize;
 }
 
 
 /* styling the admonition section */
 section#admonition {
-    margin-block-start: 150px;
+    margin-block-start: 9.375rem;
 }
 section#admonition > h1 {
     margin-block-end: 0px;
@@ -287,12 +296,12 @@ section#admonition > p {
     text-transform: capitalize;
 }
 section#admonition > div {
-    width: max-content;
+    inline-size: max-content;
     margin-inline: auto;
     display: flex;
     flex-direction: row;
     gap: 10px;
-    margin-block-start: 30px;
+    margin-block-start: 1.875rem;
 }
 section#admonition > div > * {
     text-transform: capitalize;
@@ -302,8 +311,8 @@ section#admonition > div > * {
 
 /* styling the footer */
 footer {
-    margin-block-start: 150px;
-    padding-inline: 50px;
+    margin-block-start: 9.375rem;
+    padding-inline: 3.125rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -337,17 +346,17 @@ footer > div#download-btn {
 footer > div#company-info > div#company-links > * {
     text-transform: capitalize;
     color: var(--primary-black);
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
 }
 footer > div#copyright-social-info {
-    width: 100%;
+    inline-size: 100%;
     display: flex;
     justify-content: space-between;
-    padding-block: 50px;
+    padding-block: 3.125rem;
 }
 footer > div#copyright-social-info > span {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: var(--secondary-gray);
 }
 footer > div#copyright-social-info > div {
@@ -357,7 +366,7 @@ footer > div#copyright-social-info > div {
     gap: 20px;
 }
 footer > div#copyright-social-info > div > * {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--secondary-gray);
 }
 
@@ -370,8 +379,8 @@ a.button-stroke:hover, button.button-stroke:hover,
 a.button-stroke:focus, button.button-stroke:focus,
 a.button-stroke:focus-visible, button.button-stroke:focus-visible 
 {
-    padding-inline: 15px !important;
-    padding-block: 10px !important;
+    padding-inline: 0.9375rem !important;
+    padding-block: 0.625rem !important;
     color: var(--primary-white) !important;
     background-color: var(--primary-black) !important;
     border-radius: 30px !important;
@@ -385,8 +394,8 @@ a.button:focus, button.button:focus,
 a.button:focus-visible, button.button:focus-visible
 {
     outline: none;
-    padding-inline: 20px !important;
-    padding-block: 10px !important;
+    padding-inline: 1.25rem !important;
+    padding-block: 0.625rem !important;
     color: var(--primary-black) !important;
     background-color: var(--primary-white) !important;
     border-radius: 30px !important;
@@ -401,7 +410,165 @@ div#simple-links > div.top-nav-dropdown.show > span > span:nth-of-type(2) {
 }
 div#simple-links > div.top-nav-dropdown:hover > div {
     opacity: 1;
+    z-index: 1;
 }
 footer > div#copyright-social-info > div > *:hover {
     color: var(--primary-black);
+}
+
+
+
+
+/* adding responsive styling */
+
+
+@media screen and ( max-width: 1300px ) {
+
+    /* re-doing the spacing of the elements in the navbar */
+    nav > div#menu-ctn {
+        inline-size: 85%;
+    }
+    nav > div#menu-ctn > div#simple-links, nav > div#menu-ctn > div#action-links {
+        gap: 10px;
+    }
+
+
+    /* re-doing the arrangement of the contact boxes in the main/hero section */
+    main > div {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    main > div > * {
+        inline-size: 48%;
+        border: 1px solid var(--accent-gray);
+        border-radius: 20px;
+        padding: 1.563rem;
+        background-color: var(--primary-white);
+    }
+}
+
+
+/* for mobile devices */
+@media screen and ( max-width: 850px ) {
+
+    /* restyling the navbar */
+    nav {
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    nav > span#menu {
+        display: initial;
+        font-size: 1.25rem;
+        text-transform: capitalize;
+    }
+
+    nav > div#menu-ctn {
+        inline-size: 100%;
+        flex-direction: column;
+        transition: 0.5s;
+        block-size: 0px;
+        overflow: hidden;
+    }
+    
+    /* adding an animation to the menu in the navbar */
+    nav.show > div#menu-ctn {
+        block-size: 20rem;
+        overflow: scroll;
+        margin-block-start: 5px;
+    }
+
+    nav > div#menu-ctn > div#simple-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+    div#simple-links > div.top-nav-dropdown {
+        position: static;
+    }
+    div#simple-links > div.top-nav-dropdown > div {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        z-index: initial;
+        inline-size: 90%;
+        block-size: 0px;
+        overflow: hidden;
+        margin-inline: auto;
+        padding-inline: 0rem;
+        padding-block: 0rem;
+        opacity: 1;
+        transition: 1s;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+    /* re-doing the dropdown animations / interactions in the navbar  */
+    div#simple-links > div.top-nav-dropdown.show > div {
+        block-size: 7.5rem;
+    }
+    div#simple-links > div.top-nav-dropdown:hover > div {
+        block-size: 7.5rem;
+    }
+
+    div#action-links {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+
+    /* restyling the main/hero section */
+    main, section {
+        padding-inline: 1.25rem;
+    }
+    main > img {
+        margin-inline-start: 0px;
+    }
+    main > h1, main > p {
+        text-align: start;
+    }
+    main > div {
+        inline-size: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    main > div > * {
+        inline-size: 100%;
+    }
+
+
+    /* increasing the height of the faq accordion answer */
+    div.accordion-item.show > div.accordion-answer {
+        block-size: 6.25rem;
+    }
+
+
+    /* re-styling the footer */
+    footer {
+        padding-block: 1.875rem;
+        padding-inline: 1.25rem;
+        border-block-start: 1px solid var(--accent-gray);
+    }
+    footer > div#company-info > div#company-links {
+        flex-wrap: wrap;
+    }
+    footer > div#download-btn {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        inline-size: 100%;
+    }
+    footer > div#copyright-social-info {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0px;
+    }
+    footer > div#copyright-social-info > div {
+        inline-size: 100%;
+    }
 }

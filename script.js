@@ -16,3 +16,10 @@ for ( var item of accordionItems )
         event.target.classList.toggle("show");
     });
 }
+
+
+// adding click logic to the menu button in the mobile navbar
+var menuBtn = document.querySelector("nav > span#menu");
+menuBtn.addEventListener( 'click', function( event ) {
+    event.target.parentElement.classList.toggle("show");
+})
